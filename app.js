@@ -10,7 +10,7 @@ const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
 const { listingSchema } = require("./schema.js");
 
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = process.env.ATLAS_URL;
 
 main()
   .then(() => {
