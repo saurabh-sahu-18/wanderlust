@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const PORT = process.env.PORT || 8080;
 const mongoose = require("mongoose");
 const path = require("path");
 const Listing = require("./models/listing.js");
@@ -99,6 +100,6 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error.ejs", { message });
 });
 
-app.listen(8080, () => {
-  console.log("Server Started");
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
